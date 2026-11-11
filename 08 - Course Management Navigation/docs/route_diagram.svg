@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" role="img" aria-label="Course Management navigation and routing diagram">
+  <defs>
+    <style>
+      .background{fill:#f5f7fc}.node{fill:#fff;stroke:#ccd5ea;stroke-width:2}
+      .head{font:700 20px Arial,sans-serif;fill:#17234a}.sub{font:13px Arial,sans-serif;fill:#586480}
+      .line{stroke:#5268ce;stroke-width:2.5;fill:none;marker-end:url(#arrow)}
+      .caption{font:600 13px Arial,sans-serif;fill:#394f9b}
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#5268ce"/></marker>
+  </defs>
+  <rect class="background" width="1000" height="640" rx="20"/>
+  <text x="54" y="57" class="head" style="font-size:27px">WEEK 08 · NAVIGATION ROUTE MAP</text>
+  <text x="54" y="81" class="sub">Route transitions, Drawer sections, and course tabs</text>
+  <rect x="55" y="138" width="230" height="116" rx="16" class="node"/>
+  <text x="75" y="177" class="head">Entry / Login</text><text x="75" y="206" class="sub">Named route: /</text><text x="75" y="231" class="sub">Simulated, no backend</text>
+  <rect x="387" y="137" width="240" height="116" rx="16" class="node"/>
+  <text x="407" y="177" class="head">Workspace</text><text x="407" y="206" class="sub">Named route: /workspace</text><text x="407" y="230" class="sub">Drawer → 4 sections</text>
+  <path d="M285 193 H382" class="line"/><text x="287" y="176" class="caption">replace</text>
+  <rect x="727" y="137" width="224" height="116" rx="16" class="node"/>
+  <text x="747" y="177" class="head">Course Details</text><text x="747" y="205" class="sub">MaterialPageRoute</text><text x="747" y="230" class="sub">Returns CourseUpdate</text>
+  <path d="M627 185 H722" class="line"/><text x="653" y="170" class="caption">push</text>
+  <path d="M727 232 H669 V263 H507 V256" class="line"/><text x="655" y="280" class="caption">pop(result)</text>
+  <rect x="385" y="337" width="250" height="171" rx="16" class="node"/>
+  <text x="405" y="370" class="head">Drawer sections</text>
+  <text x="405" y="400" class="sub">Home  ·  Courses</text><text x="405" y="426" class="sub">Profile  ·  Settings</text>
+  <text x="405" y="455" class="sub">Courses tabs:</text><text x="405" y="478" class="sub">All / In progress / Completed</text>
+  <path d="M507 253 V332" class="line"/><text x="523" y="300" class="caption">select</text>
+  <rect x="737" y="351" width="214" height="120" rx="16" class="node"/>
+  <text x="758" y="389" class="head">About</text><text x="758" y="419" class="sub">Named route: /about</text><text x="758" y="445" class="sub">Back → Settings</text>
+  <path d="M635 394 H732" class="line"/><text x="640" y="375" class="caption">pushNamed</text>
+  <path d="M737 452 H688 V493 H635" class="line"/><text x="642" y="512" class="caption">pop</text>
+  <path d="M385 476 H325 V565 H170 V259" class="line"/>
+  <text x="190" y="552" class="caption">Exit: clear stack → /</text>
+  <text x="54" y="610" class="sub">Drawer and tabs switch in-place. Only Course Details and About push new routes.</text>
+</svg>

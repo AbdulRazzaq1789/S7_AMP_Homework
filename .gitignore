@@ -1,0 +1,26 @@
+# Generated Flutter and Dart files
+**/.dart_tool/
+**/.pub-cache/
+**/.pub/
+**/.packages
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/build/
+**/coverage/
+
+# Local Android configuration and signing files
+**/android/.gradle/
+**/android/.kotlin/
+**/android/local.properties
+**/android/key.properties
+**/android/captures/
+**/GeneratedPluginRegistrant.java
+*.jks
+*.keystore
+
+# Editor and operating-system files
+**/.idea/
+**/.vscode/
+*.iml
+.DS_Store
+Thumbs.db

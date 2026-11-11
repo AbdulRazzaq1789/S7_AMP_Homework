@@ -1,0 +1,23 @@
+# Dart / Flutter
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+coverage/
+*.iml
+*.log
+**/doc/api/
+
+# IDE
+.idea/
+.vscode/
+
+# Android local build files
+android/.gradle/
+android/local.properties
+android/key.properties
+android/captures/
+**/.DS_Store
