@@ -65,7 +65,7 @@ class _CounterDialState extends State<CounterDial> {
                     color: AppPalette.pine,
                     shape: const CircleBorder(),
                     elevation: 10,
-                    shadowColor: AppPalette.pine.withOpacity(0.20),
+                    shadowColor: AppPalette.pine.withValues(alpha: 0.20),
                     child: InkWell(
                       key: const Key('counter_button'),
                       customBorder: const CircleBorder(),

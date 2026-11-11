@@ -88,7 +88,7 @@ class _EditionBadge extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 8),
       decoration: BoxDecoration(
-        color: AppPalette.white.withOpacity(.90),
+        color: AppPalette.white.withValues(alpha: .90),
         borderRadius: BorderRadius.circular(9),
       ),
       child: const Text(

@@ -1,6 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:week_02_student_profile_application/data/sample_student.dart';
-import 'package:week_02_student_profile_application/models/student.dart';
 
 void main() {
   test('sample student contains all required lecture profile fields', () {

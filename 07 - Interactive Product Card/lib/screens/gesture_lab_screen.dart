@@ -71,9 +71,9 @@ class _GestureLabScreenState extends State<GestureLabScreen> {
     _demo.addToBag();
     ScaffoldMessenger.of(context)
       ..hideCurrentSnackBar()
-      ..showSnackBar(SnackBar(
-        content: const Text('Added to your demo bag.'),
-        duration: const Duration(seconds: 2),
+      ..showSnackBar(const SnackBar(
+        content: Text('Added to your demo bag.'),
+        duration: Duration(seconds: 2),
       ));
   }
 
@@ -246,21 +246,21 @@ class _PageIntro extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const LabelPill(
+        LabelPill(
           label: 'LESSON 07 · HANDS-ON PROJECT',
           icon: Icons.circle_rounded,
           background: AppPalette.paleSand,
           foreground: AppPalette.ink,
         ),
-        const SizedBox(height: 14),
-        const Text('Make every gesture count.',
+        SizedBox(height: 14),
+        Text('Make every gesture count.',
           style: TextStyle(fontSize: 31, height: 1.12,
             fontWeight: FontWeight.w900, letterSpacing: -1.1)),
-        const SizedBox(height: 9),
-        const Text(
+        SizedBox(height: 9),
+        Text(
           'One product. Five intuitive interactions. Explore the card '
           'and watch your progress update as you go.',
           style: TextStyle(color: AppPalette.muted, height: 1.5,

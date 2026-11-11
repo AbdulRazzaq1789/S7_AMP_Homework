@@ -59,7 +59,7 @@ abstract final class AppTheme {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(22),
           side: BorderSide(
-            color: scheme.outlineVariant.withOpacity(isDark ? 0.35 : 0.48),
+            color: scheme.outlineVariant.withValues(alpha: isDark ? 0.35 : 0.48),
           ),
         ),
       ),
@@ -81,12 +81,12 @@ abstract final class AppTheme {
         ),
       ),
       dividerTheme: DividerThemeData(
-        color: scheme.outlineVariant.withOpacity(0.55),
+        color: scheme.outlineVariant.withValues(alpha: 0.55),
         thickness: 1,
       ),
       progressIndicatorTheme: ProgressIndicatorThemeData(
         color: scheme.primary,
-        linearTrackColor: scheme.primary.withOpacity(0.12),
+        linearTrackColor: scheme.primary.withValues(alpha: 0.12),
         borderRadius: BorderRadius.circular(100),
       ),
     );

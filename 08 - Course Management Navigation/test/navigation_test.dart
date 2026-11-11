@@ -47,10 +47,12 @@ void main() {
     expect(find.text('CS.SE.0731'), findsWidgets);
     expect(find.text('3 credit hours'), findsOneWidget);
     // A completed course moves to the Completed tab after saving.
-    await tester.ensureVisible(find.byKey(const Key('complete-toggle')));
+    await tester.scrollUntilVisible(find.byKey(const Key('complete-toggle')), 250);
+    await tester.pumpAndSettle();
     await tester.tap(find.byKey(const Key('complete-toggle')));
     await tester.pumpAndSettle();
-    await tester.ensureVisible(find.byKey(const Key('save-course-result')));
+    await tester.scrollUntilVisible(find.byKey(const Key('save-course-result')), 250);
+    await tester.pumpAndSettle();
     await tester.tap(find.byKey(const Key('save-course-result')));
     await tester.pumpAndSettle();
     expect(find.text('Course library'), findsOneWidget);

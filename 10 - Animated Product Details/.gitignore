@@ -9,7 +9,6 @@ coverage/
 .vscode/
 .flutter-plugins
 .flutter-plugins-dependencies
-.metadata
 android/.gradle/
 android/local.properties
 android/key.properties

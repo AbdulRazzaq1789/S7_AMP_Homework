@@ -4,7 +4,7 @@ import '../theme/app_palette.dart';
 
 /// Introductory Flutter widget composition: Column + Text + SizedBox.
 class RichMessage extends StatelessWidget {
-  const RichMessage({super});
+  const RichMessage({super.key});
 
   @override
   Widget build(BuildContext context) {

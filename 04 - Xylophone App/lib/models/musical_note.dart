@@ -17,6 +17,6 @@ class MusicalNote {
   final double frequencyHz;
   final Color color;
 
-  /// The bundled PCM wave file is stored at assets/notes/<id>.wav.
+  /// The bundled PCM wave file is stored at `assets/notes/<id>.wav`.
   String get assetPath => 'notes/$id.wav';
 }

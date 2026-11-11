@@ -16,7 +16,7 @@ class DhikrSelector extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       padding: EdgeInsets.zero,
       itemCount: DhikrCatalog.items.length,
-      separatorBuilder: (_, _) => const SizedBox(width: 9),
+      separatorBuilder: (_, __) => const SizedBox(width: 9),
       itemBuilder: (context, index) {
         final dhikr = DhikrCatalog.items[index];
         final selected = dhikr.id == selectedId;

@@ -36,9 +36,14 @@ void main() {
     await tester.pumpWidget(TasbihApp(controller: controller));
     await tester.pumpAndSettle();
     await tester.ensureVisible(find.byKey(const Key('counter_button')));
+    await tester.pumpAndSettle();
     await tester.tap(find.byKey(const Key('counter_button')));
     await tester.pumpAndSettle();
-    await tester.ensureVisible(find.byKey(const Key('dhikr_alhamdulillah')));
+    await tester.scrollUntilVisible(
+      find.byKey(const Key('dhikr_alhamdulillah')), -150,
+      scrollable: find.byType(Scrollable).first,
+    );
+    await tester.pumpAndSettle();
     await tester.tap(find.byKey(const Key('dhikr_alhamdulillah')));
     await tester.pumpAndSettle();
     expect(controller.data.current.count, 0);

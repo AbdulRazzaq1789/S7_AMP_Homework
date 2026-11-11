@@ -70,7 +70,7 @@ class CourseCard extends StatelessWidget {
                   child: LinearProgressIndicator(
                     value: course.progress,
                     minHeight: 7,
-                    backgroundColor: colors.primaryContainer.withOpacity(0.4),
+                    backgroundColor: colors.primaryContainer.withValues(alpha: 0.4),
                   ),
                 ),
                 const SizedBox(height: 7),

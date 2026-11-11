@@ -51,7 +51,7 @@ class WorkspaceDrawer extends StatelessWidget {
                   leading: Icon(icons[index]),
                   title: Text(labels[index]),
                   selected: selectedIndex == index,
-                  selectedTileColor: colors.primaryContainer.withOpacity(0.55),
+                  selectedTileColor: colors.primaryContainer.withValues(alpha: 0.55),
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                   onTap: () => onSelected(index),
                 ),

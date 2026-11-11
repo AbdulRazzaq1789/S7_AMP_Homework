@@ -14,7 +14,7 @@ class ProfileHero extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = Theme.of(context).brightness == Brightness.dark;
     final small = MediaQuery.sizeOf(context).width < 390;
-    final white = Colors.white;
+    const white = Colors.white;
     return Container(
       width: double.infinity,
       clipBehavior: Clip.antiAlias,
@@ -38,7 +38,7 @@ class ProfileHero extends StatelessWidget {
               height: 250,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                border: Border.all(color: white.withOpacity(.13), width: 36),
+                border: Border.all(color: white.withValues(alpha: .13), width: 36),
               ),
             ),
           ),
@@ -50,7 +50,7 @@ class ProfileHero extends StatelessWidget {
               height: 190,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: white.withOpacity(.07),
+                color: white.withValues(alpha: .07),
               ),
             ),
           ),
@@ -61,7 +61,7 @@ class ProfileHero extends StatelessWidget {
               children: [
                 Text('STUDENT PROFILE',
                     style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                      color: white.withOpacity(.9),
+                      color: white.withValues(alpha: .9),
                       fontWeight: FontWeight.w800,
                       letterSpacing: 1.8,
                     )),
@@ -118,11 +118,11 @@ class ProfileHero extends StatelessWidget {
                           const SizedBox(height: 5),
                           Text(student.department,
                               style: Theme.of(context).textTheme.bodyMedium
-                                  ?.copyWith(color: white.withOpacity(.92))),
+                                  ?.copyWith(color: white.withValues(alpha: .92))),
                           const SizedBox(height: 5),
                           Text('ID: ${student.studentId}',
                               style: Theme.of(context).textTheme.labelMedium
-                                  ?.copyWith(color: white.withOpacity(.80))),
+                                  ?.copyWith(color: white.withValues(alpha: .80))),
                         ],
                       ),
                     ),
@@ -166,8 +166,8 @@ class _HeroTag extends StatelessWidget {
   Widget build(BuildContext context) => Container(
         padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 7),
         decoration: BoxDecoration(
-          color: Colors.white.withOpacity(.14),
-          border: Border.all(color: Colors.white.withOpacity(.23)),
+          color: Colors.white.withValues(alpha: .14),
+          border: Border.all(color: Colors.white.withValues(alpha: .23)),
           borderRadius: BorderRadius.circular(10),
         ),
         child: Text(label,

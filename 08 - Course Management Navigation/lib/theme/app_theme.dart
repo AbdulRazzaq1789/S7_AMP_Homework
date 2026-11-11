@@ -40,7 +40,7 @@ abstract final class AppTheme {
         margin: EdgeInsets.zero,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
-          side: BorderSide(color: colors.outlineVariant.withOpacity(0.45)),
+          side: BorderSide(color: colors.outlineVariant.withValues(alpha: 0.45)),
         ),
       ),
       filledButtonTheme: FilledButtonThemeData(
@@ -61,7 +61,7 @@ abstract final class AppTheme {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       ),
       dividerTheme: DividerThemeData(
-        color: colors.outlineVariant.withOpacity(0.5),
+        color: colors.outlineVariant.withValues(alpha: 0.5),
         space: 1,
       ),
     );

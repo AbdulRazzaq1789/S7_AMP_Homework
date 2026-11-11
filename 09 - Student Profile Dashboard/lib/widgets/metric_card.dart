@@ -33,7 +33,7 @@ class MetricCard extends StatelessWidget {
                   width: 42,
                   height: 42,
                   decoration: BoxDecoration(
-                    color: accent.withOpacity(.13),
+                    color: accent.withValues(alpha: .13),
                     borderRadius: BorderRadius.circular(13),
                   ),
                   child: Icon(icon, color: accent, size: 22),

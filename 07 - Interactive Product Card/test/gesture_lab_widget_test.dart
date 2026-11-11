@@ -17,20 +17,27 @@ void main() {
     final gesture = find.byKey(const Key('gesture_surface'));
     await tester.ensureVisible(gesture);
     await tester.pumpAndSettle();
+    await tester.pumpAndSettle();
     await tester.tapAt(tester.getTopLeft(gesture) + const Offset(70, 100));
+    await tester.pump(const Duration(milliseconds: 350));
     await tester.pumpAndSettle();
     expect(find.byKey(const Key('product_details')), findsOneWidget);
 
     await tester.ensureVisible(find.byKey(const Key('add_to_bag')));
+    await tester.pumpAndSettle();
     await tester.tap(find.byKey(const Key('add_to_bag')));
-    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 350));
+    await tester.scrollUntilVisible(find.byKey(const Key('bag_count')), -250);
+    await tester.pumpAndSettle();
     expect(tester.widget<Text>(find.byKey(const Key('bag_count'))).data, '1');
   });
 
   testWidgets('Zoom opens a dedicated InteractiveViewer', (tester) async {
     await tester.pumpWidget(const GestureLabApp());
     await tester.ensureVisible(find.byKey(const Key('open_image_viewer')));
+    await tester.pumpAndSettle();
     await tester.tap(find.byKey(const Key('open_image_viewer')));
+    await tester.pump(const Duration(milliseconds: 350));
     await tester.pumpAndSettle();
     expect(find.byKey(const Key('pinch_image_viewer')), findsOneWidget);
     await tester.tap(find.byKey(const Key('close_image_viewer')));
@@ -69,7 +76,10 @@ void main() {
     await tester.dragFrom(startPoint, const Offset(-160, 0));
     await tester.pumpAndSettle();
     expect(find.byKey(const Key('archived_placeholder')), findsOneWidget);
+    await tester.pump(const Duration(seconds: 7));
+    await tester.pumpAndSettle();
     await tester.ensureVisible(find.byKey(const Key('restore_product')));
+    await tester.pumpAndSettle();
     await tester.tap(find.byKey(const Key('restore_product')));
     await tester.pumpAndSettle();
     expect(find.byKey(const Key('gesture_surface')), findsOneWidget);

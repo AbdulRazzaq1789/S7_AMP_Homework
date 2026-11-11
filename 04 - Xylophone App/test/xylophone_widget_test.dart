@@ -22,8 +22,12 @@ void main() {
     final audio = FakeNoteAudio();
     await tester.pumpWidget(XylophoneApp(audio: audio));
     await tester.pumpAndSettle();
+    await tester.ensureVisible(find.byKey(const Key('mute-button')));
+    await tester.pumpAndSettle();
     await tester.tap(find.byKey(const Key('mute-button')));
     await tester.pump();
+    await tester.ensureVisible(find.byKey(const Key('note-d4')));
+    await tester.pumpAndSettle();
     await tester.tap(find.byKey(const Key('note-d4')));
     await tester.pumpAndSettle();
     expect(audio.played, isEmpty);

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../models/course.dart';
 import '../models/course_update.dart';
-import '../navigation/app_routes.dart';
 import '../state/course_store.dart';
 import '../widgets/workspace_drawer.dart';
 import 'course_details_screen.dart';
